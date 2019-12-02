@@ -10,14 +10,41 @@
     
 
 
+    <button type="button">Play</button>
+
   <script>
 
 
-    var bark = new Audio('sound/bark.mp3');
-    button.addEventListner('loadeddata',()=>{
-    
-      let duration = horn.duration
+let  button = document.querySelector('button')
+    var bark = new Audio('music/Faces.mp3');
+    // window.onload = function(){
+
+
+    // setInterval(()=>{
+
+    //     bark.play();
+    // },3000)
+        
+    // }
+
+
+    button.addEventListener('click',()=>{
+        
+        
+        
+        let duration = bark.duration;
+        let muted = bark.muted;
+
+
+        bark.play();
     })
+    // ('DOMContentLoaded',()=>{
+    
+    //   let duration = bark.duration;
+    //   let muted = bark.muted;
+
+    //   bark.play();
+    // })
 
 
   </script>
