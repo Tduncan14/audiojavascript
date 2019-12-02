@@ -5,9 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+
+    <style>
+        .animal{
+            width:100px;
+            border:1px solid black;
+            height:50px;
+            text-align:center;
+            display:inline-block;
+            margin:20px;
+        }
+    
+    
+    </style>
 </head>
 <body>
-    
+    <div class="animal lion">
+     Lioni
+    </div>
+
+    <div class ="animal cougar">
+       Cougar
+    </div>
+
+    <div class="animal dog">
+        Dog
+    </div>
 
 
     <button type="button">Play</button>
@@ -15,36 +39,84 @@
   <script>
 
 
-let  button = document.querySelector('button')
-    var bark = new Audio('music/Faces.mp3');
-    // window.onload = function(){
+ const animals = document.querySelectorAll('.animal')
 
 
-    // setInterval(()=>{
 
-    //     bark.play();
-    // },3000)
+for(let i = 0; i < animals.length; i++){
+    animals[i].addEventListener('click',function(){
+
+        console.log(animals[i])
+
+        let animal = this.innerHTML;
+
+        let lower = animal.toLowerCase();
+
         
-    // }
 
 
-    button.addEventListener('click',()=>{
-        
-        
-        
-        let duration = bark.duration;
-        let muted = bark.muted;
+         makeSound(lower);
+
+         console.log(animal)
+})
+}
 
 
-        bark.play();
-    })
-    // ('DOMContentLoaded',()=>{
+function makeSound(lower){
+
+
+ switch(lower){
+
+     case 'lion':
+      let Sound1 = new Audio('#');
+      sound1.play()
+      break;
+     case 'dog':
+     let Sound2 = new Audio('#')
+     sound2.play()
+     break;
+     case 'cougar':
+     let sound3 = new Audio('#')
+     sound3.play()
+     break;
     
-    //   let duration = bark.duration;
-    //   let muted = bark.muted;
+ }
 
-    //   bark.play();
-    // })
+
+
+
+}
+
+// let  button = document.querySelector('button')
+//     var bark = new Audio('music/Faces.mp3');
+//     // window.onload = function(){
+
+
+//     // setInterval(()=>{
+
+//     //     bark.play();
+//     // },3000)
+        
+//     // }
+
+
+//     button.addEventListener('click',()=>{
+        
+        
+        
+//         let duration = bark.duration;
+//         let muted = bark.muted;
+
+
+//         bark.play();
+//     })
+//     // ('DOMContentLoaded',()=>{
+    
+//     //   let duration = bark.duration;
+//     //   let muted = bark.muted;
+
+//     //   bark.play();
+//     // })
 
 
   </script>
